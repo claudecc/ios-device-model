@@ -18,7 +18,7 @@ extension String {
             
             // 输出结果
             return letters.joined()
-        } catch let error {
+        } catch {
             return nil
         }
     }

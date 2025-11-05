@@ -3,7 +3,7 @@
 
 import Foundation
 
-public enum DeviceModel: String {
+public enum DeviceModel: String, CaseIterable {
     case iPhone2G = "iPhone1,1"
     case iPhone3G = "iPhone1,2"
     case iPhone3GS = "iPhone2,1"
@@ -406,6 +406,18 @@ public extension DeviceModel {
     static func current() -> DeviceModel? {
         DeviceModel(rawValue: rawDeviceModel())
     }
+    
+    static func ipadMinis() -> [DeviceModel] {
+        DeviceModel.allCases.filter { "\($0)".contains("iPad_mini") }
+    }
+    
+    static func ipadPros() -> [DeviceModel] {
+        DeviceModel.allCases.filter { "\($0)".contains("iPad_Pro") }
+    }
+    
+    static func ipadAirs() -> [DeviceModel] {
+        DeviceModel.allCases.filter { "\($0)".contains("iPad_Air") }
+    }
 }
 
 extension DeviceModel: Comparable {
@@ -419,3 +431,5 @@ extension DeviceModel: Comparable {
         return lhs.numerical < rhs.numerical
     }
 }
+
+extension DeviceModel: Equatable {}
