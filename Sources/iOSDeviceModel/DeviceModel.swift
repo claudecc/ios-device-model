@@ -380,6 +380,21 @@ public extension DeviceModel {
         rawValue.contains("iPad")
     }
     
+    var isPod: Bool {
+        rawValue.contains("iPod")
+    }
+    
+    var isSimulator: Bool {
+        switch self {
+        case .i386,
+             .x86_64,
+             .arm64:
+            return true
+        default:
+            return false
+        }
+    }
+    
     var numerical: Float {
         guard let name = rawValue.letters else {
             return 0
