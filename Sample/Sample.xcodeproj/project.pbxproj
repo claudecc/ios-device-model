@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C3533A62EBB267400174C89 /* ios-device-model in Frameworks */ = {isa = PBXBuildFile; productRef = 0C3533A52EBB267400174C89 /* ios-device-model */; };
+		0C3533A62EBB267400174C89 /* iOSDeviceModel in Frameworks */ = {isa = PBXBuildFile; productRef = 0C3533A52EBB267400174C89 /* iOSDeviceModel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3533A62EBB267400174C89 /* ios-device-model in Frameworks */,
+				0C3533A62EBB267400174C89 /* iOSDeviceModel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 			);
 			name = Sample;
 			packageProductDependencies = (
-				0C3533A52EBB267400174C89 /* ios-device-model */,
+				0C3533A52EBB267400174C89 /* iOSDeviceModel */,
 			);
 			productName = Sample;
 			productReference = 0C35339A2EBB266600174C89 /* Sample.framework */;
@@ -369,9 +369,9 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0C3533A52EBB267400174C89 /* ios-device-model */ = {
+		0C3533A52EBB267400174C89 /* iOSDeviceModel */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "ios-device-model";
+			productName = "iOSDeviceModel";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

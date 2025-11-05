@@ -6,7 +6,7 @@
 //
 
 import Foundation
-internal import ios_device_model
+internal import iOSDeviceModel
 
 func test() {
     let minis = DeviceModel.ipadMinis()
