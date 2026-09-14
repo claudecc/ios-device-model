@@ -4,8 +4,12 @@
 import Foundation
 
 public extension DeviceModel {
+    /// Primary display density. For iPhone Duo, this is the inner display,
+    /// independent of which display is active at runtime.
     var ppi: Int {
         switch self {
+        case .iPhoneDuo:
+            return 430
         case .iPod1,
              .iPod2,
              .iPod3,
@@ -58,6 +62,16 @@ public extension DeviceModel {
             } else {
                 return 264
             }
+        }
+    }
+
+    /// The outer display density of a dual-display device, when available.
+    var outerDisplayPPI: Int? {
+        switch self {
+        case .iPhoneDuo:
+            return 460
+        default:
+            return nil
         }
     }
 }

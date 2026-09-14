@@ -68,6 +68,11 @@ public enum DeviceModel: String, CaseIterable {
     case iPhone17ProMax = "iPhone18,2"
     case iPhone17 = "iPhone18,3"
     case iPhone17Air = "iPhone18,4"
+    case iPhone17e = "iPhone18,5"
+    case iPhone18Pro = "iPhone19,2"
+    case iPhone18ProMax_US = "iPhone19,3"
+    case iPhoneDuo = "iPhone19,4"
+    case iPhone18ProMax_Global = "iPhone19,7"
     // iPod
     case iPod1 = "iPod1,1"
     case iPod2 = "iPod2,1"
@@ -175,6 +180,10 @@ public enum DeviceModel: String, CaseIterable {
     case iPad_Pro_11_inch_5_M4_Cellular = "iPad16,4"
     case iPad_Pro_13_inch_1_M4 = "iPad16,5"
     case iPad_Pro_13_inch_1_M4_Cellular = "iPad16,6"
+    case iPad_Air_11_inch_M4 = "iPad16,8"
+    case iPad_Air_11_inch_M4_Cellular = "iPad16,9"
+    case iPad_Air_13_inch_M4 = "iPad16,10"
+    case iPad_Air_13_inch_M4_Cellular = "iPad16,11"
     case iPad_Pro_11_inch_6_M5 = "iPad17,1"
     case iPad_Pro_11_inch_6_M5_Cellular = "iPad17,2"
     case iPad_Pro_13_inch_2_M5 = "iPad17,3"
@@ -186,6 +195,9 @@ public enum DeviceModel: String, CaseIterable {
 }
 
 public extension DeviceModel {
+    /// Official name for the model represented by the existing iPhone17Air case.
+    static var iPhoneAir: DeviceModel { .iPhone17Air }
+
     var name: String {
         switch self {
         case .iPhone2G:   return "iPhone 2G"
@@ -248,10 +260,15 @@ public extension DeviceModel {
         case .iPhone16:  return "iPhone 16"
         case .iPhone16Plus:  return "iPhone 16 Plus"
         case .iPhone16e:  return "iPhone 16e"
-        case .iPhone17Pro:  return "iPhone17 Pro"
-        case .iPhone17ProMax:  return "iPhone17 Pro Max"
-        case .iPhone17:  return "iPhone17"
-        case .iPhone17Air:  return "iPhone17 Air"
+        case .iPhone17Pro:  return "iPhone 17 Pro"
+        case .iPhone17ProMax:  return "iPhone 17 Pro Max"
+        case .iPhone17:  return "iPhone 17"
+        case .iPhone17Air:  return "iPhone Air"
+        case .iPhone17e:  return "iPhone 17e"
+        case .iPhone18Pro:  return "iPhone 18 Pro"
+        case .iPhone18ProMax_US:  return "iPhone 18 Pro Max"
+        case .iPhoneDuo:  return "iPhone Duo"
+        case .iPhone18ProMax_Global:  return "iPhone 18 Pro Max"
         // iPod
         case .iPod1:     return "iPod Touch 1"
         case .iPod2:     return "iPod Touch 2"
@@ -359,6 +376,10 @@ public extension DeviceModel {
         case .iPad_Pro_11_inch_5_M4_Cellular:    return "iPad Pro 11-inch (M4, Cellular)"
         case .iPad_Pro_13_inch_1_M4:    return "iPad Pro 13-inch (M4)"
         case .iPad_Pro_13_inch_1_M4_Cellular:    return "iPad Pro 13-inch (M4, Cellular)"
+        case .iPad_Air_11_inch_M4:    return "iPad Air 11-inch (M4)"
+        case .iPad_Air_11_inch_M4_Cellular:    return "iPad Air 11-inch (M4, Cellular)"
+        case .iPad_Air_13_inch_M4:    return "iPad Air 13-inch (M4)"
+        case .iPad_Air_13_inch_M4_Cellular:    return "iPad Air 13-inch (M4, Cellular)"
         case .iPad_Pro_11_inch_6_M5:    return "iPad Pro 11-inch (M5)"
         case .iPad_Pro_11_inch_6_M5_Cellular:    return "iPad Pro 11-inch (M5, Cellular)"
         case .iPad_Pro_13_inch_2_M5:    return "iPad Pro 13-inch (M5)"

@@ -45,6 +45,11 @@ import Foundation
     @objc public static func ppi(for rawValue: String) -> Int {
         return DeviceModel(rawValue: rawValue)?.ppi ?? 0
     }
+
+    /// 获取设备外屏的 PPI；无外屏或未知设备返回 0
+    @objc public static func outerDisplayPPI(for rawValue: String) -> Int {
+        return DeviceModel(rawValue: rawValue)?.outerDisplayPPI ?? 0
+    }
     
     /// 获取所有 iPad mini 设备模型
     @objc public static func iPadMinis() -> [String] {
@@ -66,4 +71,3 @@ import Foundation
         return DeviceModel.rawDeviceModel()
     }
 }
-
